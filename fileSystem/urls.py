@@ -15,10 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from apiApp import views
+from fileSystem import views
 
 urlpatterns = [
-    url(r'^fetchApi$', views.fetchApi),
-    url(r'^getApiTree$',views.getApiTree),
-    url(r'^download$', views.download)
+    url(r'^download/(\d+)/$', views.download)
 ]
